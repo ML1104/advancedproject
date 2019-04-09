@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Traits\Timestamp;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -36,4 +37,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function artwork()
+    {
+        return $this->hasMany(Artwork::class);
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'users', 'followed_id', 'follower_id');
+    }
+    public function followers()
+    {
+        return $this->belongsToMany(User::class, 'users', 'follower_id', 'followed_id');
+    }
 }
