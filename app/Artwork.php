@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Artwork extends Model
 {
+    public $table = 'artwork';
+
     protected $fillable = ['title', 'description', 'upvotes'];
 
     public function user()
@@ -17,4 +19,6 @@ class Artwork extends Model
     {
        return $this->belongsToMany(Tag::class, 'artwork_tag', 'tag_id');
     }
+
+    public $timestamps = false;
 }

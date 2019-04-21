@@ -10,4 +10,6 @@ class Tag extends Model
     {
         return $this->belongsToMany(Artwork::class, 'artwork_tag', 'artwork_id');
     }
+
+    public $timestamps = false;
 }

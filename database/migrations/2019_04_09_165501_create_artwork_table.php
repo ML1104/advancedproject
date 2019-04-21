@@ -18,6 +18,7 @@ class CreateArtworkTable extends Migration
             $table->string('title');
             $table->string('description')->nullable();
             $table->integer('upvotes');
+            $table->string('url');
         });
     }
 

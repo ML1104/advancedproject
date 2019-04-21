@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dice', function () {
     return view('dice');
 });
+
+Route::get('/homepage', function () {
+    return view('homepage');
+});

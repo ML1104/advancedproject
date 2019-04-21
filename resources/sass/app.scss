@@ -8,7 +8,37 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+a {
+    color: $white!important;
+}
+
 .navbar-laravel {
-  background-color: #fff;
+  background-color: #3E3E3E;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.welcome-button {
+    width: 500px;
+    height: 70px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        border: 2px solid $green;
+    }
+
+    span {
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 35%;
+    position: absolute;
 }
