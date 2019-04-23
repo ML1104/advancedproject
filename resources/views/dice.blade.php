@@ -2,6 +2,6 @@
 
 @section('content')
     <div class="container">
-        <div class="align-content-center">DICE</div>
+        <dice-component></dice-component>
     </div>
 @endsection

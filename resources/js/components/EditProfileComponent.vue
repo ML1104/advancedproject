@@ -1,15 +1,16 @@
 <template>
     <div class="flexBox">
-        <div class="flexBox">
-            <img class="has-photo" v-if="userData.image_url" :src="'/storage/users/' + userData.image_url" alt="">
-            <span class="no-photo" v-if="!userData.image_url">No Photo</span>
-        </div>
-        <div class="flexBox">
-            <h5>{{ userData.name }}</h5>
-            <h4>"{{ userData.alias }}"</h4>
-            <h5>{{ userData.surname }}</h5>
-        </div>
-        <div class="edit-button"><a href="/editProfile">Edit Profile</a></div>
+        <form method="POST" action="{{ userData }}" class="flexBox">
+            <label for="name">Name</label>
+            <input id="name" type="text">
+            <label for="alias">Alias</label>
+            <input id="alias" type="text">
+            <label for="surname">Surname</label>
+            <input id="surname" type="text">
+            <label for="image">Profile Picture</label>
+            <input id="image" type="file">
+        </form>
+        <div class="edit-button"><a href="">Submit</a></div>
         <div class="box-shadow"></div>
     </div>
 </template>

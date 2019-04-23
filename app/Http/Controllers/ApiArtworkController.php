@@ -11,7 +11,7 @@ class ApiArtworkController extends Controller
 {
     public function index()
     {
-        $artwork = Artwork::orderBy('upvotes', 'DESC')->get();
+        $artwork = Artwork::with('user')->orderBy('upvotes', 'DESC')->get();
 
         return $artwork;
     }

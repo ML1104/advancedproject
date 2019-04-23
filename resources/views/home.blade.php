@@ -21,7 +21,7 @@
     {{--</div>--}}
 {{--</div>--}}
 <div class="container">
-    <welcome-component></welcome-component>
+    <home-component></home-component>
 </div>
 
 @endsection

@@ -19,6 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/profile', 'ProfileController@index')->name('profile');
+
+Route::get('/editProfile', function () {
+    return view('editProfile');
+});
+
 Route::get('/dice', function () {
     return view('dice');
 });

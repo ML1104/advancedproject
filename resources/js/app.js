@@ -26,10 +26,12 @@ Vue.use(ElementUI);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('home-component', require('./components/HomeComponent').default);
 Vue.component('welcome-component', require('./components/WelcomeComponent').default);
 Vue.component('profile-component', require('./components/ProfileComponent').default);
 Vue.component('dice-component', require('./components/DiceComponent').default);
 Vue.component('contact-component', require('./components/ContactComponent').default);
+Vue.component('editProfile-component', require('./components/EditProfileComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

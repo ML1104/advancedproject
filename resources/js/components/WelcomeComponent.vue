@@ -1,8 +1,8 @@
 <template>
-    <div class="container">
+    <div class="container" id="enterButton">
         <div class="row justify-content-center">
             <div class="col-md-8 center-content">
-                <el-button class="welcome-button" @click="" type="primary" round><span><a href="/home">ENTER</a></span></el-button>
+                <el-button class="welcome-button" @click="enter" type="primary" round><span>ENTER</span></el-button>
             </div>
         </div>
     </div>
@@ -11,8 +11,9 @@
 <script>
     export default {
         methods: {
-            function() {
-
+            enter: function (event) {
+                const button = document.getElementById('enterButton');
+                button.classList.add('is-invisible');
             }
         },
 

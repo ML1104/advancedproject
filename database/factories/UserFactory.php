@@ -17,9 +17,16 @@ use Faker\Generator as Faker;
 
 $factory->define(User::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
+        'name' => $faker->firstName,
+        'surname' => $faker->lastName,
         'email' => $faker->unique()->safeEmail,
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'alias' => $faker->word,
+        'status' => 'Filler',
+        'image_url' => $faker->image(storage_path('app/public/users'), 150,150, null, false),
+        'supporters' => random_int(1, 5),
+        'phone' => $faker->numberBetween(100000, 999999),
+        'about' => $faker->sentence($nbWords = 20, $variableNbWords = true),
+        'password' => bcrypt('testbot'),
         'remember_token' => Str::random(10),
     ];
 });

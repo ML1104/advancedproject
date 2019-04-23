@@ -8,7 +8,7 @@ class Artwork extends Model
 {
     public $table = 'artwork';
 
-    protected $fillable = ['title', 'description', 'upvotes'];
+    protected $fillable = ['title', 'description', 'upvotes', 'url'];
 
     public function user()
     {
